@@ -52,6 +52,7 @@ const questionOne =
         choice4: '<div class="option">As Told by Ginger</div>',
     }
 
+    
     const questionSeven =
     {
         question: '<div id="question">On the Simpsons what musical instrument does Lisa Simpson play?</div>',
