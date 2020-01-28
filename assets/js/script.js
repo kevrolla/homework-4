@@ -2,7 +2,10 @@ $(document).ready(function () {
     var time = 10;
     var quizNum = 0;
     var correctAnswers = 0;
+    var wrongAnswers = 0;
     var intervalId;
+
+
 
     const questionOne =
     {
@@ -180,7 +183,8 @@ $(document).ready(function () {
 
     function displayQuiz(display) {
         $("#results").html(display.question + display.choice1 + display.choice2 + display.choice3 + display.choice4);
-        $("#correctNum").html(correctAnswers + '/15 Correct Answers')
+        $("#correctNum").html(correctAnswers + '/15 Correct Answers' + " " + wrongAnswers + '/15 Wrong Answers')
+        
     }
 
     function showNextQuestion() {
@@ -215,6 +219,7 @@ $(document).ready(function () {
         $(".option").on("click", function () {
             
             $("#results").html('Incorrect! you are not worth to be a Toon Head LOL! <br> <img src ="./assets/css/images.jpeg">')
+            wrongAnswers += 1;
             clearInterval(intervalId);
             setTimeout(showNextQuestion, 1000);
         })
