@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var time = 15;
+    var time = 10;
     var quizNum = 0;
     var correctAnswers = 0;
     var intervalId;
@@ -160,7 +160,7 @@ $(document).ready(function () {
     };
 
     function timeStart() {
-        time = 15;
+        time = 10;
         clearInterval(intervalId);
         intervalId = setInterval(timesUp, 1000);
     }
@@ -171,10 +171,10 @@ $(document).ready(function () {
         $("#time").html(translateTime + " seconds");
         if (time === 0) {
             $("#results").html("Times up! You are too slow to be a Toon Head LOL! <br> <img src='https://media1.tenor.com/images/9df512e6a2bce6011493459ccf0cde56/tenor.gif?itemid=5283911'>")
-            quizNum += 1;
+            quizNum += 0;
             clearInterval(intervalId);
             setTimeout(showNextQuestion, 5000);
-            setTimeout(timeStart, 1500);
+            setTimeout(timeStart, 1000);
         }
     }
 
@@ -207,7 +207,7 @@ $(document).ready(function () {
             $("#results").html('You are a Toon Head! <br> <img src="./assets/css/images2.jpeg">')
             correctAnswers += 1;
             clearInterval(intervalId);
-            setTimeout(showNextQuestion, 1500);
+            setTimeout(showNextQuestion, 1000);
         });
     }
 
@@ -216,7 +216,7 @@ $(document).ready(function () {
             
             $("#results").html('Incorrect! you are not worth to be a Toon Head LOL! <br> <img src ="./assets/css/images.jpeg">')
             clearInterval(intervalId);
-            setTimeout(showNextQuestion, 1500);
+            setTimeout(showNextQuestion, 1000);
         })
     }
 
