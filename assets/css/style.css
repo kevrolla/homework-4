@@ -1,0 +1,48 @@
+body{
+    background-image: url("images\ 3.jpeg");
+    position: fixed;
+    font-family: 'Chilanka', cursive;
+    background-size: cover;
+    width: 100%;
+    height: 100%
+}
+
+.container{
+    text-align: center;
+    color: white;
+    font-family: 'Chilanka', cursive;
+}
+
+.sub-container{
+    text-align: center;
+    color: white;
+    font-family: 'Chilanka', cursive;
+    font-size: 35px;
+}
+
+.main-container{
+    position: relative;
+    top: 25%;
+    font-family: 'Chilanka', cursive;
+    background: rgba(100,100,100,0.8);
+}
+
+#title{
+    font-size: 50px;
+}
+
+#question{
+    background: rgba(120, 160,140,0.5);
+}
+
+#results{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#answer:hover,
+.option:hover{
+    border: 2px solid white;
+    background: rgba(140, 180,160,0.8);
+    border-radius: 40px;
+}
